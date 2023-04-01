@@ -1,0 +1,23 @@
+version: '3'
+services:
+  postgres-elblag:
+    image: postgres:10
+    hostname: postgres
+    ports:
+      - "5332:5432"
+    environment:
+      POSTGRES_USER: elblag
+      POSTGRES_PASSWORD: abc123
+      POSTGRES_DB: elblag
+    restart: always
+
+  pgadmin:
+    build: ./pgadmin
+    depends_on:
+      - postgres-elblag
+    ports:
+      - "6543:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: padmin@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    restart: always

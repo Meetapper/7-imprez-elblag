@@ -1,0 +1,14 @@
+{
+    "Servers": {
+    "1": {
+            "Name": "elblag",
+            "Group": "Servers",
+            "Host": "postgres",
+            "Port": 5432,
+            "MaintenanceDB": "elblag",
+            "Username": "elblag",
+            "SSLMode": "prefer",
+            "PassFile": "/pgadmin_settings/pgpassfile"
+        }
+    }
+}
